@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reeshav Singh - Data Analyst Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #333;
+            overflow-x: hidden;
+        }
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+        }
+        .card h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        .card h2 i {
+            margin-right: 10px;
+        }
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .metric-value {
+            font-size: 2em;
+            font-weight: bold;
+            color: #764ba2;
+        }
+        .progress-bar {
+            width: 100%;
+            height: 10px;
+            background: #e9ecef;
+            border-radius: 5px;
+            overflow: hidden;
+            margin-top: 5px;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #667eea, #764ba2);
+            transition: width 0.5s ease;
+        }
+        .skill-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+        }
+        .skill-item {
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .chart-container {
+            height: 200px;
+            position: relative;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+            padding-left: 20px;
+            position: relative;
+        }
+        li::before {
+            content: '●';
+            color: #667eea;
+            position: absolute;
+            left: 0;
+        }
+        header {
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            padding: 20px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+        footer {
+            text-align: center;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            backdrop-filter: blur(10px);
+        }
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1><i class="fas fa-chart-line"></i> Reeshav Singh - Data Analyst Dashboard</h1>
+        <p>Operations Chat Repair Analyst | eClerx, Pune</p>
+    </header>
+
+    <div class="dashboard">
+        <div class="card">
+            <h2><i class="fas fa-user"></i> About Me</h2>
+            <p>Professional Data Analyst specializing in operations chat repair, data visualization, and automation. Expert in crafting impactful summaries, resumes, and analytical profiles. Passionate about turning data into actionable insights.</p>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-cogs"></i> Key Metrics</h2>
+            <div class="metric">
+                <span>Projects Completed</span>
+                <span class="metric-value">15+</span>
+            </div>
+            <div class="metric">
+                <span>Tools Mastered</span>
+                <span class="metric-value">6</span>
+            </div>
+            <div class="metric">
+                <span>Years of Experience</span>
+                <span class="metric-value">2+</span>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-tools"></i> Tools & Skills</h2>
+            <div class="skill-grid">
+                <div class="skill-item">
+                    <strong>ECM</strong><br>Raising Tickets
+                    <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <strong>ACSR</strong><br>Order Updates
+                    <div class="progress-bar"><div class="progress-fill" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <strong>Einstein 360</strong><br>ITGs & Mobile Mgmt
+                    <div class="progress-bar"><div class="progress-fill" style="width: 75%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <strong>Power BI</strong><br>Data Viz & Reports
+                    <div class="progress-bar"><div class="progress-fill" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <strong>MySQL</strong><br>Database Querying
+                    <div class="progress-bar"><div class="progress-fill" style="width: 70%;"></div></div>
+                </div>
+                <div class="skill-item">
+                    <strong>Python</strong><br>Data Cleaning & Automation
+                    <div class="progress-bar"><div class="progress-fill" style="width: 85%;"></div></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-briefcase"></i> Experience</h2>
+            <ul>
+                <li><strong>Data Analyst / Operations Chat Repair</strong> at eClerx, Pune</li>
+                <li>Created resume summaries and job profiles for analytical roles</li>
+                <li>Developed Excel trackers with charts for expense management</li>
+                <li>Designed chat flows and support scripts</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-project-diagram"></i> Projects</h2>
+            <ul>
+                <li>Resume Summaries: Short, impactful profiles</li>
+                <li>Data Reports: Power BI visualizations</li>
+                <li>Automation Scripts: Python-based data cleaning</li>
+                <li>Expense Trackers: Excel with integrated charts</li>
+                <li>Customer Flows: Chat support designs</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-chart-pie"></i> Skill Distribution</h2>
+            <div class="chart-container">
+                <canvas id="skillChart"></canvas>
+            </div>
+        </div>
+
+        <div class="card">
+            <h2><i class="fas fa-envelope"></i> Contact</h2>
+            <p><i class="fas fa-envelope"></i> Email: Singhrv863@gail.com</p>
+            <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/reeshav-singh-sonkhle-910b851a0" target="_blank">www.linkedin.com/in/reeshav-singh-sonkhle-910b851a0</a></p>
+            <p><i class="fas fa-phone"></i> Phone: 7083039038 / 9226901472</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Reeshav Singh. Built with creativity and data insights.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('skillChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ['Data Analysis', 'Visualization', 'Automation', 'Operations', 'Reporting'],
+                datasets: [{
+                    data: [25, 20, 20, 20, 15],
+                    backgroundColor: ['#667eea', '#764ba2', '#f093fb', '#f5576c', '#4facfe'],
+                    borderWidth: 0
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: {
+                        position: 'bottom',
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
